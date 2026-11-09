@@ -9,7 +9,7 @@ int main()
 		
 cout<<"***Company login system**** \n\n";
 	   
-	   cout << "System Status (1: Running, 2: Under Maintenance): \n";
+	   cout << "System Status (1: Running, 2:  Under Maintenance): \n";
     cin >> systemstatus;
 	   
 	if (systemstatus == 1){
