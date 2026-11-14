@@ -1,0 +1,44 @@
+#include  <iostream>
+#include  <string>
+using namespace std;
+int main()
+{
+	int age;
+	string passward;
+	int systemstatus;
+		
+cout<<"***Company login system**** \n\n";
+	   
+	   cout << "System Status (1: Running, 2:  Under Maintenance): \n";
+    cin >> systemstatus;
+	   
+	if (systemstatus == 1){
+			
+cout<<"enter your age?\n";
+cin>>age;
+		
+		if(age>= 18){
+			
+cout<<"please enter your passward? \n";
+cin>>passward;
+	
+	if(passward=="admin123"){
+		cout<<"\n[Welcome] Access granted successfully as (Admin).\n";
+            } 
+		
+		else if(passward=="user123"){
+			cout<< "\n[Welcome] Access granted successfully as (Regular User).\n";}
+				
+		else
+		cout<<"\n[Error] Incorrect password! Access denied.\n";
+		
+	} else{
+		cout<< "\n[Access Denied] Sorry, you must be 18 years old or older to enter.\n";
+	}
+	
+} else {
+	 cout<<"\n[Notice] Sorry, the system is currently under maintenance. Please try again later.\n";
+    }
+
+	return 0;
+}
