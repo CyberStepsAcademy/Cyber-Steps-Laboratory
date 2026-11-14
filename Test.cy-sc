@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+
+    bool isSystemActive;
+    cout <<
+ "هل النظام يعمل؟ (أدخل 1 للعمل، أو 0 للصيانة): ";
+    cin >> isSystemActive;
+
+    if (isSystemActive) {
+       
+        int age;
+        cout << "الرجاء إدخال عمرك: ";
+        cin >> age;
+
+        if (age >= 18) {         
+            string password;
+            cout << "الرجاء إدخال كلمة المرور: ";
+            cin >> password;
+
+            if (password == "admin124") {
+                cout << "\n[تم الدخول بنجاح]: مرحباً بك.. تم تسجيل دخولك كـ (مدير)!" << endl;
+            } 
+            else if (password == "User123") {
+                cout << "\n[تم الدخول بنجاح]: مرحباً بك.. تم تسجيل دخولك كـ (مستخدم عادي)." << endl;
+            } 
+            else {
+                cout << "\n[خطأ]: كلمة المرور خاطئة. تم رفض الدخول!" << endl;
+            }
+        } 
+        else {
+            
+            cout << "\n[عذراً]: العمر أقل من 18 سنة. تم رفض الدخول!" << endl;
+        }
+    } 
+    else {
+        cout << "\n[عذراً]: النظام مغلق حالياً للصيانة. يرجى المحاولة لاحقاً." << endl;
+    }
+    return 0;
+}
